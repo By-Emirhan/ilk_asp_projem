@@ -2,7 +2,7 @@
 {
     public void ConfigureServices(IServiceCollection services)
     {
-        // servis kayıtları
+        services.AddControllersWithViews();
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -14,12 +14,11 @@
 
         app.UseRouting();
 
-        app.UseEndpoints(endpoints =>
+        app.UseEndpoints(routes =>
         {
-            endpoints.MapGet("/", async context =>
-            {
-                await context.Response.WriteAsync("Hello from Startup.cs!");
-            });
+            routes.MapControllerRoute(
+                name: "default",
+                pattern: "{controller=Home}/{action=Index}");
         });
     }
 }
