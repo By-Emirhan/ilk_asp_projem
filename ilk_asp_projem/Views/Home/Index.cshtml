@@ -4,11 +4,28 @@
 @{
 }
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head><title>
-
-    </title></head>
-    <body>
-        <div>Projemin ilk kısmı...</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ders 4</title>
+</head>
+<body>
+    <div style="background-color:aqua">Projemin Başılangıcı saat: @DateTime.Now.ToShortTimeString()</div>
+    <br />
+    <div style="border-radius: 5px; background-color:yellow; color:darkblue">
+        @for(int i = 0; i <= 10; i++){
+            @i
+            <br />
+        }
+    </div>
+    <br />
+    <div style="border-radius: 5px; background-color:darkblue; color:white">
+        @{
+            var liste = new List<string>() { "İstanbul", "Ankara", "Şanlıurfa" };
+        }
+        @foreach(var Li in liste){
+            @Li <br />
+        }
+        </div>
     </body>
-</html>
+    </html>

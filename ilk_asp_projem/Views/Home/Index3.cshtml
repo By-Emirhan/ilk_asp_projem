@@ -1,0 +1,28 @@
+﻿@model List<ilk_asp_projem.Models.kitap>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title>3.Sayfamız</title>
+    </head>
+    <body>
+        <h4>Kitap Listemiz.</h4>
+        <br />
+        <br />
+        <table style="background-color:black; color:white">
+            @foreach(var k in Model)
+            {
+                <tr>
+                    <td>@k.ID</td>
+                    <td>@k.bookName</td>
+                    <td>@k.bookWriter</td>
+                    <br />
+                </tr>
+            }
+        </table>
+    </body>
+    </html>
