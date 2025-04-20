@@ -23,5 +23,10 @@ namespace ilk_asp_projem.Controllers
             };
             return View(book);
         }
+        public IActionResult Index4()
+        {
+            ViewBag.deger1 = "Selam ....";
+            return View();
+        }
     }
 }
