@@ -28,5 +28,17 @@ namespace ilk_asp_projem.Controllers
             ViewBag.deger1 = "Selam ....";
             return View();
         }
+        public IActionResult Index5()
+        {
+            return View();
+        }
+        public IActionResult Index6()
+        {
+            return View();
+        }
+        public IActionResult Index7()
+        {
+            return View();
+        }
     }
 }
